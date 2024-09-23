@@ -1,0 +1,14 @@
+<h1>{{ title }}</h1>
+<router-outlet></router-outlet>
+
+<div>
+  <button (click)="buttonAction1()" [disabled]="!userService.isLoggedIn()">Button 1</button>
+  <button (click)="buttonAction2()" [disabled]="!userService.isLoggedIn()">Button 2</button>
+  <button (click)="buttonAction3()" [disabled]="!userService.isLoggedIn()">Button 3</button>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<div *ngIf="!userService.isLoggedIn()">
+  <p>Please log in to enable the buttons.</p>
+  <button [routerLink]="['/login']">Login</button>
+</div>

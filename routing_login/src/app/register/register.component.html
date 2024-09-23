@@ -1,0 +1,13 @@
+<!-- src/app/register/register.component.html -->
+<form (ngSubmit)="handleRegister()">
+    <input
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      placeholder="Enter your email"
+      required
+    />
+    <button type="submit">Register</button>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  </form>
+  

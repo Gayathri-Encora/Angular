@@ -1,0 +1,37 @@
+
+
+    /* Custom styles for the navbar */
+    .navbar {
+      padding: 10px 15px; /* Adjust navbar padding */
+    }
+    
+    .navbar-brand {
+      font-size: 24px; /* Increase font size for brand */
+      padding: 10px 15px; /* Adjust padding around brand text */
+    }
+    
+    .nav-link {
+      font-size: 18px; /* Increase font size for navbar links */
+      padding-top: 10px; /* Adjust top padding of links */
+      padding-bottom: 10px; /* Adjust bottom padding of links */
+    }
+    
+    /* Align navbar brand to the left */
+    .navbar-header {
+      float: left; /* Ensure brand is aligned to the left */
+    }
+
+    /* Ensure navbar items are aligned properly */
+    .navbar-nav {
+      margin: 0; /* Remove margin to align with navbar brand */
+    }
+  
+#demo img{
+    height: 400px;
+}
+.custom-link {
+    font-size: 1.25rem; /* Adjust the size as needed */
+  }
+  #services img{
+    height: 350px
+  }

@@ -1,0 +1,13 @@
+<h2>All Appointments</h2>
+<button (click)="createAppointment()">Create Appointment</button>
+<ul>
+  <li *ngFor="let appointment of appointments">
+    <strong>{{ appointment.patient_name }}</strong> - {{ appointment.doctor_name }}<br>
+    Date: {{ appointment.appointmentDate | date:'short' }}<br>
+    Status: {{ appointment.status }}<br>
+    Description: {{ appointment.description }}<br>
+    Priority: {{ appointment.priority }}<br>
+    Location: {{ appointment.location }}<br>
+    Specialty: {{ appointment.specialty }}<br>
+  </li>
+</ul>

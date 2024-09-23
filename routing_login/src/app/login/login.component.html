@@ -1,0 +1,12 @@
+<h2>Login Page</h2>
+<form (ngSubmit)="handleLogin()">
+  <input
+    type="email"
+    [(ngModel)]="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+  />
+  <button type="submit">Login</button>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+</form>

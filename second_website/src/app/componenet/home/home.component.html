@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<section id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../assets/image1.jpg" alt="Los Angeles" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/image2.jpg" alt="Chicago" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/image3.jpg" alt="New York" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</section>
+
+<section id="services" class="container">
+  <div class="text-danger text-center">
+    <h1>VGN Dance Class</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-12 mb-3" *ngFor="let service of services">
+      <div class="card">
+        <img src="../assets/{{service.imagepath}}" alt="{{service.name}}" class="card-img-top">
+        <div class="card-body">
+          <h3>{{service.name}}</h3>
+          <p>{{service.description}}</p>
+          <a  class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<app-footer></app-footer>

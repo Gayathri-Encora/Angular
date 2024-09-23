@@ -1,0 +1,44 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="patient_name">Patient Name:</label>
+      <input id="patient_name" [(ngModel)]="appointment.patient_name" name="patient_name" required />
+    </div>
+    
+    <div>
+      <label for="doctor_name">Doctor Name:</label>
+      <input id="doctor_name" [(ngModel)]="appointment.doctor_name" name="doctor_name" required />
+    </div>
+    
+    <div>
+      <label for="appointmentDate">Appointment Date:</label>
+      <input type="datetime-local" id="appointmentDate" [(ngModel)]="appointment.appointmentDate" name="appointmentDate" required />
+    </div>
+    
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="appointment.description" name="description"></textarea>
+    </div>
+    
+    <div>
+      <label for="status">Status:</label>
+      <input id="status" [(ngModel)]="appointment.status" name="status" />
+    </div>
+    
+    <div>
+      <label for="priority">Priority:</label>
+      <input id="priority" [(ngModel)]="appointment.priority" name="priority" />
+    </div>
+    
+    <div>
+      <label for="location">Location:</label>
+      <input id="location" [(ngModel)]="appointment.location" name="location" />
+    </div>
+    
+    <div>
+      <label for="specialty">Specialty:</label>
+      <input id="specialty" [(ngModel)]="appointment.specialty" name="specialty" />
+    </div>
+    
+    <button type="submit">Create Appointment</button>
+  </form>
+  
