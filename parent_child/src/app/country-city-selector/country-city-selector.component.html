@@ -1,0 +1,15 @@
+<p>country-city-selector works!</p>
+<form [formGroup]="form">
+    <label for="country">Select Country:</label>
+    <select id="country" formControlName="country">
+      <option value="">--Select Country--</option>
+      <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+    </select>
+  
+    <label for="city">Select City:</label>
+    <select id="city" formControlName="city">
+      <option value="">--Select City--</option>
+      <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+  </form>
+  

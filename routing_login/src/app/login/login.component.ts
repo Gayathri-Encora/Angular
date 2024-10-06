@@ -1,3 +1,4 @@
+// login.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
@@ -13,12 +14,10 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router) {}
 
   handleLogin() {
-    this.userService.loginUser(this.email).subscribe((isLoggedIn) => {
-      if (isLoggedIn) {
-        this.router.navigate(['/']); // Redirect to the main page on successful login
-      } else {
-        this.errorMessage = 'Invalid credentials, please try again.';
-      }
-    });
+    if (this.userService.login(this.email)) {
+      this.router.navigate(['/home']); // Change to your home/dashboard route
+    } else {
+      this.errorMessage = 'Email not registered. Please register first.';
+    }
   }
 }

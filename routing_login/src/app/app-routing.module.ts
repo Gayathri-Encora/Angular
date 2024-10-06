@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [ 
+  { path: '', redirectTo: '/register', pathMatch: 'full' }, // Set registration as the landing page
+  { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  // other routes...
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // default route
-  // catch-all route
-  { path: '**', redirectTo: '/home' },
+
 ];
 
 @NgModule({

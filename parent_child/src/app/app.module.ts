@@ -3,24 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CountryCitySelectorComponent } from './country-city-selector/country-city-selector.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
-import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    LoginComponent
+    CountryCitySelectorComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  
   providers: [],
   bootstrap: [AppComponent]
 })
